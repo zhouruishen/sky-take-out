@@ -105,6 +105,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
+    public Employee queryById(long id) {
+        return employeeMapper.queryById(id);
+    }
+    @Override
     public void editEmp(EmployeeDTO employeeDTO) {
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDTO,employee);
@@ -116,8 +120,5 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeMapper.update(employee);
     }
 
-    @Override
-    public Employee queryById(long id) {
-        return employeeMapper.queryById(id);
-    }
+
 }
