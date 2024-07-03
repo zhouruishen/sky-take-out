@@ -25,4 +25,8 @@ public interface EmployeeMapper {
     void insertemp(Employee employee);
 
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    void update(Employee employee);
+
+    Employee queryById(long id);
 }
